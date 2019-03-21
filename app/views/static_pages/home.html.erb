@@ -1,7 +1,18 @@
-<% provide(:title, "Home") %>
+<div class="center jumbotron">
+    <% provide(:title, "Home") %>
     <h1>Insta clone</h1>
     <p>
-        Sign up to see photos and videos from your friends.
-        <!--  <a href="">Instagram clone</a> -->
+      Sign up to see photos and videos from your friends.
+      <!--  <a href="">Instagram clone</a> -->
     </p>
-    
+    <h2>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    </h2>
+    <p>
+      or
+    </p>
+    <h3>
+      Have an account? <%= link_to "Log in", '#'%> 
+    </h3>
+</div>
+

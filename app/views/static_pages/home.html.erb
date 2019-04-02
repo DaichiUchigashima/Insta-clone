@@ -1,0 +1,36 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h2>Micropost Feed</h2>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+  <div class="center jumbotron">
+    <h1>Insta clone</h1>
+    <p>
+      Sign up to see photos and videos from your friends.
+      <!--  <a href="">Instagram clone</a> -->
+    </p>
+    <h2>
+      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    </h2>
+    <p>
+      or
+    </p>
+    <h3>
+      Have an account? <%= link_to "Log in", login_path%> 
+    </h3>
+  </div>
+<% end %>
